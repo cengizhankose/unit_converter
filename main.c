@@ -233,15 +233,15 @@ int main(void)
 
         if (navigation == 1)
         {
-            fixedValue = amount + 273;
+            fixedValue = amount * 1;
         }
         else if (navigation == 2)
         {
-            fixedValue = amount + 256;
+            fixedValue = (amount - 32) / 1.8;
         }
         else if (navigation == 3)
         {
-            fixedValue = amount * 1;
+            fixedValue = amount - 273;
         }
 
         system("cls");
@@ -253,17 +253,17 @@ int main(void)
         scanf("%d", &navigation);
         if (navigation == 1)
         {
-            result = fixedValue - 273;
+            result = fixedValue / 1;
             printf("RESULT : %.2f\n", result);
         }
         else if (navigation == 2)
         {
-            result = fixedValue - 256;
+            result = (fixedValue * 1.8) + 32;
             printf("RESULT : %.2f\n", result);
         }
         else if (navigation == 3)
         {
-            result = fixedValue / 1;
+            result = fixedValue + 273;
             printf("RESULT : %.2f\n", result);
         }
         break;
