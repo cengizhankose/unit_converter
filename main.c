@@ -4,9 +4,10 @@
 
 int main(void)
 {
-    int unit, currencyUnit, chooseResult;
+    int navigation;
     float amount, fixedValue, result;
 
+    system("cls");
     printf("             WELCOME TO UNIT CONVERTER            \n");
     printf("==================================================\n");
     printf("             (Please choose your unit)            \n");
@@ -16,9 +17,9 @@ int main(void)
     printf("4-) Volume\n");
     printf("5-) Area\n");
     printf("6-) Temperature\n");
-    scanf("%d", &unit);
+    scanf("%d", &navigation);
 
-    switch (unit)
+    switch (navigation)
     {
     case 1:
         system("cls");
@@ -27,20 +28,20 @@ int main(void)
         printf("1-) Dollar\n");
         printf("2-) Euro\n");
         printf("3-) Turkish Lira\n");
-        scanf("%d", &currencyUnit);
+        scanf("%d", &navigation);
 
         printf("Enter your amount: ");
         scanf("%f", &amount);
 
-        if (currencyUnit == 1)
+        if (navigation == 1)
         {
             fixedValue = amount * 8.09;
         }
-        else if (currencyUnit == 2)
+        else if (navigation == 2)
         {
             fixedValue = amount * 9.55;
         }
-        else if (currencyUnit == 3)
+        else if (navigation == 3)
         {
             fixedValue = amount * 1;
         }
@@ -51,18 +52,18 @@ int main(void)
         printf("1-) Dollar\n");
         printf("2-) Euro\n");
         printf("3-) Turkish Lira\n");
-        scanf("%d", &chooseResult);
-        if (chooseResult == 1)
+        scanf("%d", &navigation);
+        if (navigation == 1)
         {
             result = fixedValue / 8.09;
             printf("RESULT : %f\n", result);
         }
-        else if (chooseResult == 2)
+        else if (navigation == 2)
         {
             result = fixedValue / 9.55;
             printf("RESULT : %f\n", result);
         }
-        else if (chooseResult == 3)
+        else if (navigation == 3)
         {
             result = fixedValue / 1;
             printf("RESULT : %f\n", result);
@@ -72,9 +73,60 @@ int main(void)
         system("cls");
         printf("            Choose your unit of Length            \n");
         printf("==================================================\n");
-        printf("1-) Dollar\n");
-        printf("2-) Euro\n");
-        printf("3-) Turkish Lira\n");
+        printf("1-) km\n");
+        printf("2-) m\n");
+        printf("3-) cm\n");
+        printf("4-) mm\n");
+        scanf("%d", &navigation);
+
+        printf("Enter your amount: ");
+        scanf("%f", &amount);
+
+        if (navigation == 1)
+        {
+            fixedValue = amount * 1000000;
+        }
+        else if (navigation == 2)
+        {
+            fixedValue = amount * 1000;
+        }
+        else if (navigation == 3)
+        {
+            fixedValue = amount * 10;
+        }
+        else if (navigation == 4)
+        {
+            fixedValue = amount * 1;
+        }
+
+        system("cls");
+        printf("            Choose your unit to convert           \n");
+        printf("==================================================\n");
+        printf("1-) km\n");
+        printf("2-) m\n");
+        printf("3-) cm\n");
+        printf("4-) mm\n");
+        scanf("%d", &navigation);
+        if (navigation == 1)
+        {
+            result = fixedValue / 1000000;
+            printf("RESULT : %.2f\n", result);
+        }
+        else if (navigation == 2)
+        {
+            result = fixedValue / 1000;
+            printf("RESULT : %.2f\n", result);
+        }
+        else if (navigation == 3)
+        {
+            result = fixedValue / 10;
+            printf("RESULT : %.2f\n", result);
+        }
+        else if (navigation == 4)
+        {
+            result = fixedValue / 1;
+            printf("RESULT : %.2f\n", result);
+        }
         break;
     case 3:
         system("cls");
@@ -112,8 +164,4 @@ int main(void)
         break;
     }
     return 0;
-}
-
-float massConverter(actualMass)
-{
 }
