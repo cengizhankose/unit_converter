@@ -132,33 +132,140 @@ int main(void)
         system("cls");
         printf("             Choose your unit of Mass             \n");
         printf("==================================================\n");
-        printf("1-) Dollar\n");
-        printf("2-) Euro\n");
-        printf("3-) Turkish Lira\n");
-        break;
+        printf("1-) kg\n");
+        printf("2-) g\n");
+        printf("3-) mg\n");
+        scanf("%d", &navigation);
+
+        printf("Enter your amount: ");
+        scanf("%f", &amount);
+
+        if (navigation == 1)
+        {
+            fixedValue = amount * 1000000;
+        }
+        else if (navigation == 2)
+        {
+            fixedValue = amount * 1000;
+        }
+        else if (navigation == 3)
+        {
+            fixedValue = amount * 1;
+        }
+
+        system("cls");
+        printf("            Choose your unit to convert           \n");
+        printf("==================================================\n");
+        printf("1-) kg\n");
+        printf("2-) g\n");
+        printf("3-) mg\n");
+        scanf("%d", &navigation);
+        if (navigation == 1)
+        {
+            result = fixedValue / 1000000;
+            printf("RESULT : %.2f\n", result);
+        }
+        else if (navigation == 2)
+        {
+            result = fixedValue / 1000;
+            printf("RESULT : %.2f\n", result);
+        }
+        else if (navigation == 3)
+        {
+            result = fixedValue / 1;
+            printf("RESULT : %.2f\n", result);
+        }
     case 4:
         system("cls");
         printf("            Choose your unit of Volume            \n");
         printf("==================================================\n");
-        printf("1-) Dollar\n");
-        printf("2-) Euro\n");
-        printf("3-) Turkish Lira\n");
+        printf("1-) km^3 to m^3\n");
+        printf("2-) m^3 to km^3\n");
+        scanf("%d", &navigation);
+
+        printf("Enter your amount: ");
+        scanf("%f", &amount);
+
+        if (navigation == 1)
+        {
+            result = amount * 1000000000;
+            printf("RESULT : %.2f\n", result);
+        }
+        else if (navigation == 2)
+        {
+            result = amount / 1000000000;
+            printf("RESULT : %.2f\n", result);
+        }
         break;
     case 5:
         system("cls");
         printf("              Choose your unit of Area            \n");
         printf("==================================================\n");
-        printf("1-) Dollar\n");
-        printf("2-) Euro\n");
-        printf("3-) Turkish Lira\n");
+        printf("1-) km^2 to m^2\n");
+        printf("2-) m^2 to km^2\n");
+        scanf("%d", &navigation);
+
+        printf("Enter your amount: ");
+        scanf("%f", &amount);
+
+        if (navigation == 1)
+        {
+            result = amount * 1000000;
+            printf("RESULT : %.2f\n", result);
+        }
+        else if (navigation == 2)
+        {
+            result = amount / 1000000;
+            printf("RESULT : %.2f\n", result);
+        }
         break;
     case 6:
         system("cls");
         printf("          Choose your unit of Temperature         \n");
         printf("==================================================\n");
         printf("1-) Celcius\n");
-        printf("2-) Fahren\n");
-        printf("3-) Turkish Lira\n");
+        printf("2-) Fahrenheit\n");
+        printf("3-) Kelvin\n");
+        scanf("%d", &navigation);
+
+        printf("Enter your amount: ");
+        scanf("%f", &amount);
+
+        if (navigation == 1)
+        {
+            fixedValue = amount + 273;
+        }
+        else if (navigation == 2)
+        {
+            fixedValue = amount + 256;
+        }
+        else if (navigation == 3)
+        {
+            fixedValue = amount * 1;
+        }
+
+        system("cls");
+        printf("            Choose your unit to convert           \n");
+        printf("==================================================\n");
+        printf("1-) Celcius\n");
+        printf("2-) Fahrenheit\n");
+        printf("3-) Kelvin\n");
+        scanf("%d", &navigation);
+        if (navigation == 1)
+        {
+            result = fixedValue - 273;
+            printf("RESULT : %.2f\n", result);
+        }
+        else if (navigation == 2)
+        {
+            result = fixedValue - 256;
+            printf("RESULT : %.2f\n", result);
+        }
+        else if (navigation == 3)
+        {
+            result = fixedValue / 1;
+            printf("RESULT : %.2f\n", result);
+        }
         break;
     default:
         break;
