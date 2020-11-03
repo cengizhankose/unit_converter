@@ -175,6 +175,7 @@ int main(void)
             result = fixedValue / 1;
             printf("RESULT : %.2f\n", result);
         }
+        break;
     case 4:
         system("cls");
         printf("            Choose your unit of Volume            \n");
